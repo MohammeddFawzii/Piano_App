@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:piano/views/piano_view.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({
@@ -23,7 +24,9 @@ class HomeView extends StatelessWidget {
           style: ElevatedButton.styleFrom(
             backgroundColor: const Color(0xff282C34),
           ),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, PianoView.id);
+          },
           child: const Padding(
             padding: EdgeInsets.all(12),
             child: Text(
