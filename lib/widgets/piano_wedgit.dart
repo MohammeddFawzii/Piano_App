@@ -4,18 +4,21 @@ import 'package:flutter/material.dart';
 class PianoItem extends StatelessWidget {
   const PianoItem({
     super.key,
+    required this.audio,
+    required this.color,
   });
-
+  final String audio;
+  final Color color;
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: GestureDetector(
         onTap: () {
           final player = AudioPlayer();
-          player.play(AssetSource('Sounds/note1.wav'));
+          player.play(AssetSource(audio));
         },
         child: Container(
-          color: const Color(0xffFD403C),
+          color: color,
         ),
       ),
     );

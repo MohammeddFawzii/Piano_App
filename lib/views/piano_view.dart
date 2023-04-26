@@ -21,11 +21,36 @@ class PianoView extends StatelessWidget {
       ),
       body: Column(
         children: const [
-          PianoItem(),
+          PianoItem(
+            audio: "Sounds/note1.wav",
+            color: Color(0xffFD403C),
+          ),
+          PianoItem(
+            audio: "Sounds/note2.wav",
+            color: Color(0xffFF972A),
+          ),
+          PianoItem(
+            audio: "Sounds/note3.wav",
+            color: Color(0xffFFE955),
+          ),
+          PianoItem(
+            audio: "Sounds/note4.wav",
+            color: Color(0xff33AF57),
+          ),
+          PianoItem(
+            audio: "Sounds/note5.wav",
+            color: Color(0xff009786),
+          ),
+          PianoItem(
+            audio: "Sounds/note6.wav",
+            color: Color(0xff0098EE),
+          ),
+          PianoItem(
+            audio: "Sounds/note7.wav",
+            color: Color(0xffA428AC),
+          ),
         ],
       ),
     );
   }
 }
-
-
