@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:piano/views/home_view.dart';
 
 void main() {
   runApp(const PianoApp());
@@ -9,6 +10,12 @@ class PianoApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      theme: ThemeData(useMaterial3: true),
+      routes: {
+        HomeView.id: (context) => const HomeView(),
+      },
+      initialRoute: HomeView.id,
+    );
   }
 }
